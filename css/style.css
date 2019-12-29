@@ -37,8 +37,7 @@ body{
     border-bottom: 2px solid #000;
     opacity: .6
 }
-.header-inner ul a:checked{
-}
+
 /*main*/
 /*profile*/
 main{
@@ -46,7 +45,7 @@ main{
 }
 .img-wrapper-box{
     position: relative;
-    background-image:url("../images/venice-4704342_1280.webp");
+    background-image:url("../images/image1.jpg");
     background-size: cover;
     height:650px;
     opacity: .7;
@@ -57,7 +56,7 @@ main{
    left: 0;
    right: 0;
    margin: auto;
-   color: #fff;
+   color:darkblue;
 }
 .title{
     margin: 0;
@@ -69,6 +68,7 @@ main{
     text-align: center;
     font-size: 42px;
     font-family: 'Inria Serif', serif;
+    font-weight:600;
 }
 #profile-wrapper{
     width: 75%;
@@ -449,4 +449,66 @@ footer{
     font-size: 13px;
     }
   
+ }
+@media screen and (max-width: 375px) {
+ .header-inner ul li a{
+   font-size: 16px;
 }
+ dt{
+   width: 40%;  
+ }
+
+.profile-wrapper-text section{
+        width: 120%
+ }
+    #profile-wrapper{
+        height: 570px;
+}
+    .section-inner-content p:nth-child(3){
+        font-size: 11px;
+    }
+    .section-inner{
+        height: 270px;
+    }
+#skill-wrapper{
+     height: 1200px;   
+}
+    #contact-wrapper p:nth-child(3){
+    font-size: 10px;    
+}
+footer{
+    margin-top: 50px;
+    height: 150px;
+}
+#contact-wrapper{
+    width: 80%;
+    margin: 70px auto;
+}
+
+.contact-wrapper-inner{
+    width: 50%;
+    margin: 0 auto;
+    justify-content:space-around;
+}
+.contact-wrapper-inner a:nth-child(1){
+    font-size: 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.contact-wrapper-inner{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.twitter-image{
+    width: 30px;
+    border-radius:30px;
+ }
+    .title{
+        color: blue;
+    }
+    .myname{
+        color: blue;
+    }
+    }
