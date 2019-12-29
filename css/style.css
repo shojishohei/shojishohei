@@ -43,12 +43,16 @@ body{
 main{
     line-height: 1.6;
 }
-.img-wrapper-box{
+.slideshow{
+    overflow:hidden;;
     position: relative;
-    background-image:url("../images/image1.jpg");
-    background-size: cover;
     height:650px;
-    opacity: .7;
+}
+.slideshow img{
+  display: none;
+  position: absolute;
+  left:50%;
+  margin-left: -800px;
 }
 .title-wrapper{
    position: absolute;
@@ -56,7 +60,7 @@ main{
    left: 0;
    right: 0;
    margin: auto;
-   color:darkblue;
+   color:#FFFF99;
 }
 .title{
     margin: 0;
@@ -156,7 +160,7 @@ dd{
     background-color: red;
     border-radius: 10px;
     border-bottom-right-radius:0px;
-    border-top-right-radius: 0px;  
+    border-top-right-radius: 0px;
 }
 .content-box-rails{
     width: 20%;
@@ -172,7 +176,7 @@ dd{
     background-color: red;
     border-radius: 10px;
     border-bottom-right-radius:0px;
-    border-top-right-radius: 0px;  
+    border-top-right-radius: 0px;
 }
 .content-box-js{
     width: 10%;
@@ -180,7 +184,7 @@ dd{
     background-color: red;
     border-radius: 10px;
     border-bottom-right-radius:0px;
-    border-top-right-radius: 0px;  
+    border-top-right-radius: 0px;
 }
 footer{
     margin-top: 50px;
@@ -192,7 +196,7 @@ footer{
 }
 #contact-wrapper h1{
     text-align: center;
-    
+
 }
 .contact-wrapper-inner{
     width: 60%;
@@ -249,7 +253,7 @@ footer{
    display: none;
     margin: 0;
 }
-.img-wrapper-box{
+.slideshow{
     height: 300px;
 }
 .title-wrapper{
@@ -277,7 +281,7 @@ footer{
     height: 450px;
 }
  .profile-wrapper-text h1{
-    text-align: center;    
+    text-align: center;
 }
 
 .profile-wrapper-text section{
@@ -296,22 +300,22 @@ footer{
     height: 300px;
 }
 #skill-wrapper{
-     height: 1300px;   
+     height: 1300px;
 }
 footer{
-   height: 200px;     
+   height: 200px;
 }
 .contact-wrapper-inner{
-   width:100%; 
+   width:100%;
 }
 .contact-wrapper-inner p{
-    font-size:25px;    
+    font-size:25px;
  }
 #contact-wrapper>p{
    font-size:15px;
 }
 .contact-wrapper-inner .or{
-   font-size: 20px; 
+   font-size: 20px;
 }
 
 @media screen and (max-width: 550px) { /*ウィンドウ幅が最大550pxまでの場合に適用(スマホ用)*/
@@ -327,12 +331,12 @@ footer{
     margin-bottom: 0;
 }
  .header-inner ul li a{
-    font-size: 20px;
+    font-size: 18px;
 }
 .header-inner img{
    display: none;
 }
-.img-wrapper-box{
+.slideshow{
     height: 300px;
 }
 .title-wrapper{
@@ -346,7 +350,7 @@ footer{
 }
     #profile-wrapper{
     width: 75%;
-    height: 500px;
+    height: 550px;
     margin: 50px auto;
     display: block;
     justify-content: space-between;
@@ -361,7 +365,7 @@ footer{
     font-size: 14px;
 }
  .profile-wrapper-text h1{
-    text-align: center;    
+    text-align: center;
 }
 
 .profile-wrapper-text section{
@@ -374,7 +378,7 @@ footer{
     width: 100%;
 }
  dt{
-   width: 50%;     
+   width: 50%;
  }
 
  .skill-wrapper-program section{
@@ -382,19 +386,19 @@ footer{
 }
  .section-inner{
     width: 100%;
-    height: 300px;
+    height: 280px;
 }
 #skill-wrapper{
-     height: 1300px;   
+     height: 1200px;
 }
 footer{
-   height: 300px;     
+   height: 300px;
 }
 .contact-wrapper-inner{
-   width:100%; 
+   width:100%;
 }
 .contact-wrapper-inner p{
-    font-size:25px;    
+    font-size:25px;
  }
 #contact-wrapper>p{
    font-size:18px;
@@ -409,7 +413,7 @@ footer{
 }
 #contact-wrapper h1{
     text-align: center;
-    
+
 }
 .contact-wrapper-inner{
     width: 60%;
@@ -431,7 +435,7 @@ footer{
     opacity: .8
 }
 .contact-wrapper-inner .or{
-   font-size: 14px; 
+   font-size: 14px;
 }
 .contact-wrapper-inner{
     display: flex;
@@ -443,38 +447,38 @@ footer{
     border-radius:30px;
  }
 #contact-wrapper p:nth-child(3){
-    font-size: 12px;    
+    font-size: 12px;
 }
 .section-inner-content p:nth-child(3){
-    font-size: 13px;
+    font-size: 12px;
     }
-  
+
  }
 @media screen and (max-width: 375px) {
  .header-inner ul li a{
-   font-size: 16px;
+   font-size: 15px;
 }
  dt{
-   width: 40%;  
+   width: 40%;
  }
 
 .profile-wrapper-text section{
         width: 120%
  }
     #profile-wrapper{
-        height: 570px;
+        height: 520px;
 }
     .section-inner-content p:nth-child(3){
-        font-size: 11px;
+        font-size: 10px;
     }
     .section-inner{
         height: 270px;
     }
 #skill-wrapper{
-     height: 1200px;   
+     height: 1200px;
 }
     #contact-wrapper p:nth-child(3){
-    font-size: 10px;    
+    font-size: 9px;
 }
 footer{
     margin-top: 50px;
@@ -506,9 +510,24 @@ footer{
     border-radius:30px;
  }
     .title{
-        color: blue;
+        color:#FFFF99;
     }
     .myname{
-        color: blue;
+        color:#FFFF99;
     }
+    .slideshow{
+        height: 250px;
+    }
+    .title-wrapper{
+       top: 100px;
+    }
+    .title{
+        font-size: 50px;
+    }
+    .myname{
+        font-size: 16px;
+  }
+  .profile-wrapper-text p:nth-child(2){
+    font-size: 12px;
+  }
     }
