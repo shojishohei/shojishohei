@@ -199,10 +199,11 @@ dt{
 }
 footer{
     height: 250px;
-}
+  }
+
 #contact-wrapper{
     width: 80%;
-    margin: 0px auto 60px auto;
+    margin: 0px auto 0px auto;
 }
 #contact-wrapper h1{
     padding-top: 30px;
@@ -335,6 +336,9 @@ footer{
 .contact-wrapper-inner .or{
    font-size: 20px;
 }
+#contact-wrapper{
+    width: 80%;
+}
 
 @media screen and (max-width: 550px) { /*ウィンドウ幅が最大550pxまでの場合に適用(スマホ用)*/
   .header-inner{
@@ -414,10 +418,7 @@ dd{
 }
 #skill-wrapper{
      margin: 0 auto;
-     height: 1200px;
-}
-footer{
-   height: 300px;
+     height: 1250px;
 }
 .contact-wrapper-inner{
    width:100%;
@@ -429,12 +430,12 @@ footer{
    font-size:18px;
 }
 footer{
-  margin-top: 40px;
-    height: 200px;
+   margin: 0;
+    height:200px;
 }
 #contact-wrapper{
     width: 80%;
-    margin: 70px auto 0px auto;
+
 }
 #contact-wrapper h1{
     text-align: center;
@@ -478,14 +479,19 @@ footer{
     font-size: 12px;
     }
 
+    #contact-wrapper{
+        width: 80%;
+    }
  }
 @media screen and (max-width: 418px) {
  .header-inner ul li a{
    font-size: 15px;
 }
-footer{
-   height: 200px;
+#contact-wrapper{
+    width: 80%;
+    margin: 0px auto 0px auto;
 }
+
 .profile-wrapper-text{
         width: 90%;
         margin: 0 auto;
@@ -557,7 +563,9 @@ footer{
   .profile-wrapper-text section{
     width: 100%;
   }
-
+  footer{
+     height: 200px;
+  }
     }
   @media screen and (max-width: 366px) {
     .profile-wrapper-text section dl{
@@ -566,6 +574,10 @@ footer{
   footer{
      height: 170px;
 
+}
+#contact-wrapper{
+    width: 80%;
+}
 }
     @media screen and (max-width: 348px) {
       dt{

@@ -169,6 +169,13 @@ $(function(){
      color:'#000'
     },
   500
-   );
+);
+})
+.on('mouseout',function(){
+  $('.contact-wrapper-inner a').stop(true).animate({
+     color:'#000'
+    },
+  500
+);
 });
 });
