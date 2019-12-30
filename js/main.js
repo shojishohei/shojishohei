@@ -1,3 +1,6 @@
+
+/*05-01を引用*/
+
 $(function () {
 
     /*
@@ -35,4 +38,137 @@ $(function () {
 
     });
 
+});
+/*05-03を引用*/
+$(function () {
+
+    /*
+     * Sticky header
+     */
+    $('.header-inner').each(function () {
+
+        var $window = $(window), // ウィンドウを jQuery オブジェクト化
+            $header = $(this),   // ヘッダーを jQuery オブジェクト化
+            // ヘッダーのデフォルト位置を取得
+            headerOffsetTop = $header.offset().top;
+
+        // ウィンドウのスクロールイベントを監視
+        // (ウィンドウがスクロールするごとに処理を実行する)
+        $window.on('scroll', function () {
+            // ウィンドウのスクロール量をチェックし、
+            // ヘッダーのデフォルト位置を過ぎていればクラスを付与、
+            // そうでなければ削除
+            if ($window.scrollTop() > headerOffsetTop) {
+                $header.addClass('sticky');
+            } else {
+                $header.removeClass('sticky');
+            }
+        });
+
+        // ウィンドウのスクロールイベントを発生させる
+        // (ヘッダーの初期位置を調整するため)
+        $window.trigger('scroll');
+
+    });
+});
+
+/*05-08を引用*/
+$(function () {
+
+    /*
+     * Back-toTop button (Smooth scroll)
+     */
+    $('#profile-wrapper').on('click', function () {
+
+        // Smooth Scroll プラグインを実行
+        $.smoothScroll({
+            easing: 'easeOutExpo', // イージングの種類
+            speed: 500             // 所要時間
+        });
+    });
+
+});
+
+/*02-04を引用*/
+$(function(){
+  $('#profile-wrapper')
+  .on('mouseover',function(){
+    $('#profile-wrapper').stop(true).animate({
+       backgroundColor:'#99FFFF'
+      },
+    500
+);
+})
+.on('mouseout',function(){
+  $('#profile-wrapper').stop(true).animate({
+     backgroundColor:'#FFF8DC'
+    },
+  500
+   );
+});
+});
+
+$(function(){
+  $('#skill-wrapper')
+  .on('mouseover',function(){
+    $('#skill-wrapper').stop(true).animate({
+       backgroundColor:'#CC99CC'
+      },
+    500
+);
+})
+.on('mouseout',function(){
+  $('#skill-wrapper').stop(true).animate({
+     backgroundColor:'#FFF8DC'
+    },
+  500
+
+   );
+});
+});
+
+$(function(){
+  $('.section-inner')
+  .on('mouseover',function(){
+    $('.section-inner').stop(true).animate({
+      backgroundColor:'#CC99CC'
+      },
+    500
+);
+})
+.on('mouseout',function(){
+  $('.section-inner').stop(true).animate({
+     backgroundColor:'#FFF8DC'
+    },
+  500
+
+   );
+});
+});
+
+$(function(){
+  $('footer')
+  .on('mouseover',function(){
+    $('footer').stop(true).animate({
+       backgroundColor:'#606060',
+       color:'#fff'
+      },
+    500
+);
+})
+.on('mouseover',function(){
+  $('.contact-wrapper-inner a').stop(true).animate({
+     color:'#fff'
+    },
+  500
+   );
+})
+.on('mouseout',function(){
+  $('footer').stop(true).animate({
+     backgroundColor:'#FFF8DC',
+     color:'#000'
+    },
+  500
+   );
+});
 });
