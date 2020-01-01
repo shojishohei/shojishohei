@@ -313,6 +313,10 @@ color:#666666;
     border:6px solid #660033;
     border-radius: 10px;
 }
+.work-wrapper-inner section img:hover{
+  opacity: 0.7;
+  transition-duration:.2s;
+}
 .work-section{
   width: 80%;
   margin: 0 auto;
@@ -499,6 +503,9 @@ footer{
   margin-right: auto;
   margin-left: auto;
 }
+#experince-wrapper{
+    height: 590px;
+}
 @media screen and (max-width:530px) {
   .title{
       font-size: 50px;
@@ -531,6 +538,9 @@ footer{
 }
 .contact-wrapper-inner p:nth-child(1) a{
   font-size: 24px;
+  #experince-wrapper{
+      height: 590px;
+  }
 }
 footer{
   height: 230px;
@@ -578,6 +588,9 @@ footer{
   .title-wrapper{
     position: absolute;
     top:110px;
+  }
+  #experince-wrapper{
+      height: 590px;
   }
   #profile-wrapper{
     height: 690px;
@@ -640,3 +653,4 @@ footer{
   position: absolute;
   top:100px;
 }
+v
