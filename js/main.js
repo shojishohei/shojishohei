@@ -75,18 +75,74 @@ $(function () {
 /*05-08を引用*/
 $(function () {
 
-    /*
-     * Back-toTop button (Smooth scroll)
-     */
     $('#profile-wrapper').on('click', function () {
 
         // Smooth Scroll プラグインを実行
         $.smoothScroll({
             easing: 'easeOutExpo', // イージングの種類
-            speed: 500             // 所要時間
+            speed: 2000             // 所要時間
         });
     });
 
 });
 
-/*02-04を引用*/
+/*04-04を引用*/
+$(function(){
+    //
+    var duration = 300;
+
+    // aside ----------------------------------------
+    var $aside = $('.header-inner');
+    var $asidButton = $aside.find('button')
+        .on('click', function(){
+            $aside.toggleClass('open');
+            if($aside.hasClass('open')){
+                $aside.stop(true).animate({left: '-70px'}, duration, 'easeOutBack');
+                $asidButton.find('img').attr('src', 'img/btn_close.png');
+            }else{
+                $aside.stop(true).animate({left: '-350px'}, duration, 'easeInBack');
+                $asidButton.find('img').attr('src', 'img/btn_open.png');
+            };
+        });
+
+});
+/*05-07*/
+$(function () {
+
+    /*
+     * Back-toTop button (Smooth scroll)
+     */
+    $('.img8').each(function () {
+
+        // html か body のいずれがスクロール可能な要素かを検出
+        var $el = $(scrollableElement('html', 'body'));
+
+        // ボタンにクリックイベントを設定
+        $(this).on('click', function (event) {
+            event.preventDefault();
+            $el.animate({ scrollTop: 0 }, 650);
+        });
+    });
+
+    // scrollTop が利用できる要素を検出する関数
+    // http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links#update4
+    function scrollableElement (elements) {
+        var i, len, el, $el, scrollable;
+        for (i = 0, len = arguments.length; i < len; i++) {
+            el = arguments[i],
+            $el = $(el);
+            if ($el.scrollTop() > 0) {
+                return el;
+            } else {
+                $el.scrollTop(1);
+                scrollable = $el.scrollTop() > 0;
+                $el.scrollTop(0);
+                if (scrollable) {
+                    return el;
+                }
+            }
+        }
+        return [];
+    }
+
+});

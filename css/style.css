@@ -340,7 +340,7 @@ color:#666666;
   text-align: center;
 }
 footer{
-    height: 250px;
+    height: 200px;
   }
 
 #contact-wrapper{
@@ -350,6 +350,7 @@ footer{
     font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 }
 #contact-wrapper h1{
+  margin-bottom: 0;
   color:#660033;
   font-size: 40px;
   font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
@@ -396,13 +397,30 @@ footer{
 .copy{
   color:#660033;
   font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-  width: 95%;
-  text-align: right;
+  text-align:center;
   font-size:12px;
   opacity: 0.7;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
+/*追加*/
+footer img:nth-child(3):hover{
+  opacity: 0.7;
+  transition-duration: 0.7s;
+}
+.img8{
+  position: fixed;
+  bottom:10px;
+  right: 2%;
+    border-width: 0;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    width: 26px;
+    display: block;
+    height: 26px;
+    overflow: hidden;
+}
 /*レスポンシブ対応*/
 
 @media screen and (max-width: 990px) { /*ウィンドウ幅が最大767pxまでの場合に適用(タブレット)*/
@@ -542,9 +560,7 @@ footer{
       height: 590px;
   }
 }
-footer{
-  height: 230px;
-}
+
 .or{
   font-size: 14px;
 }
@@ -570,6 +586,10 @@ footer{
 }
 }
 @media screen and (max-width:375px) {
+  .header-inner{
+    height: 50px;
+  }
+
   .title{
       font-size: 36px;
   }
@@ -580,14 +600,15 @@ footer{
     font-size: 13px;
   }
   .slideshow{
-    height: 270px;
+    height: 240px;
   }
+
   .header-inner ul a{
     font-size: 11px;
   }
   .title-wrapper{
     position: absolute;
-    top:110px;
+    top:90px;
   }
   #experince-wrapper{
       height: 590px;
@@ -612,7 +633,7 @@ footer{
     font-size: 10px;
   }
   footer{
-    height: 200px;
+    height: 180px;
   }
   .copy{
     text-align: center;
@@ -623,6 +644,38 @@ footer{
     #work-wrapper{
       height: 1160px;
     }
+    .img8{
+      width: 16px;
+      height: 16px;
+      right: 1%;
+    }
+/*
+.header-inner{
+  width:975px;
+  height: 160px;
+  top:0;
+  left: -145px;
+  position: fixed;
+  z-index: 1;
+  justify-content: center;
+}
+.header-inner ul{
+  display: block;
+  margin: 0 auto;
+}
+.header-inner ul{
+  display:none;
+}
+.header-inner p{
+  margin-top:15px;
+  margin-left:4%;
+  display:flex;
+}
+*/
+
+
+
+
 }
 @media screen and (max-width:350px) {
   .contact-wrapper-inner p:nth-child(1) a{
@@ -653,4 +706,3 @@ footer{
   position: absolute;
   top:100px;
 }
-v
