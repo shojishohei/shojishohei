@@ -411,14 +411,14 @@ footer img:nth-child(3):hover{
 .img8{
   position: fixed;
   bottom:10px;
-  right: 2%;
+  right: 1%;
     border-width: 0;
     cursor: pointer;
     display: block;
     margin: 0;
-    width: 26px;
+    width: 37px;
     display: block;
-    height: 26px;
+    height: 37px;
     overflow: hidden;
 }
 /*レスポンシブ対応*/
@@ -644,11 +644,17 @@ footer img:nth-child(3):hover{
     #work-wrapper{
       height: 1160px;
     }
-    .img8{
-      width: 16px;
-      height: 16px;
-      right: 1%;
-    }
+.img8{
+  width: 30px;
+  height: 30px;
+  opacity: 0.6;
+  position: fixed;
+  bottom:10px;
+  right:2%;
+}
+.img8:hover{
+  opacity: 1.0;
+}
 /*
 .header-inner{
   width:975px;
