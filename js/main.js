@@ -90,18 +90,17 @@ $(function () {
 $(function(){
     //
     var duration = 300;
-
+   /*変数 durationに300を格納*/
     // aside ----------------------------------------
-    var $aside = $('.header-inner');
-    var $asidButton = $aside.find('button')
+    var $aside = $('.header-inner aside');
+
+      var $asides = $('.header-inner2 button ')
         .on('click', function(){
-            $aside.toggleClass('open');
+            $aside.toggleClass('open');/*asideにopenというクラスがあるか確認。*/
             if($aside.hasClass('open')){
-                $aside.stop(true).animate({left: '-70px'}, duration, 'easeOutBack');
-                $asidButton.find('img').attr('src', 'img/btn_close.png');
+                $aside.stop(true).animate({top: '50px'}, duration, 'easeOutBack');
             }else{
-                $aside.stop(true).animate({left: '-350px'}, duration, 'easeInBack');
-                $asidButton.find('img').attr('src', 'img/btn_open.png');
+                $aside.stop(true).animate({top: '-350px'}, duration, 'easeInBack');
             };
         });
 

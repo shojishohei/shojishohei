@@ -15,21 +15,33 @@ body{
     -webkit-box-shadow: 0 1px 1px rgb(255,255,255,0.25);
     box-shadow: 0 1px 1px rgb(255,255,255,0.25);
 }
+
+.header-inner2 p{
+  display: none;
+}
+.header-inner2 button{
+  display: none;
+}
 .header-inner.sticky{
     position: fixed;
     top:0;
+}
+
+.header-inner aside{
+  width: 60%;
 }
 .header-inner ul {
     width:500px;
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    margin-right:13%;
     height: 20px;
     margin-top: 28px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .header-inner p{
-    width: 40%;
+    width: 30%;
     text-align: center;
     font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
     font-weight: 500;
@@ -424,6 +436,18 @@ footer img:nth-child(3):hover{
 /*レスポンシブ対応*/
 
 @media screen and (max-width: 990px) { /*ウィンドウ幅が最大767pxまでの場合に適用(タブレット)*/
+  .header-inner aside{
+    width: 75%;
+  }
+  .header-inner ul {
+      width:500px;
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      margin-top: 28px;
+      margin-left: auto;
+      margin-right: auto;
+  }
   .title{
       font-size: 80px;
   }
@@ -473,11 +497,29 @@ footer img:nth-child(3):hover{
 .content{
   font-size: 12px;
 }
+
+.header-inner aside{
+  width: 75%;
+}
 .header-inner ul {
-  margin-right: 7px;
+    margin-right: 7px;
+    width:500px;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-top: 28px;
+    margin-left: auto;
+    margin-right: auto;
 }
  }
 @media screen and (max-width:706px) {
+    .header-inner{
+      text-align: center;
+    }
+    .header-inner aside{
+      width: 100%;
+          margin: 0 auto;
+    }
   .title{
       font-size: 60px;
   }
@@ -525,6 +567,73 @@ footer img:nth-child(3):hover{
     height: 590px;
 }
 @media screen and (max-width:530px) {
+  header{
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  .header-inner2{
+    height: 50px;
+    margin: 0 auto;
+   justify-content: space-between;
+    display:flex;
+  }
+  .header-inner2 p{
+    margin-left: 20px;
+  }
+  .header-inner2 button{
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: none;
+    z-index: 1;
+  }
+  .header-inner aside ul{
+    display: block;
+    margin: 0;
+    padding: 0;
+    top: 14px;
+    left: -36%;
+    position: absolute;
+  }
+  .header-inner aside ul li{
+    margin-bottom: 20px;
+  }
+  .header-inner {
+      width:100%;
+      top: 0px;
+      position:relative;
+      height: 0;
+  }
+  .header-inner2 button img{
+  width: 25px;
+  height: 25px;
+  }
+  .header-inner aside{
+    background-color: rgba(36,0,9,0.8);
+    width:100%;
+    height: 200px;
+    top: -350px;
+    position: fixed;
+  }
+  .slideshow{
+    height: 290px;
+  }
+  .header-inner2 p{
+    display: block;
+  }
+  .header-inner ul a{
+    font-size: 11px;
+    color:#fff;
+  }
+
+  .title-wrapper{
+    position: absolute;
+    top:90px;
+  }
   .title{
       font-size: 50px;
   }
@@ -534,16 +643,8 @@ footer img:nth-child(3):hover{
   .mywork{
     font-size: 16px;
   }
-  .slideshow{
-    height: 340px;
-  }
-  .profile-img{
-   height: 300px;;
-}
-.title-wrapper{
-  position: absolute;
-  top:125px;
-}
+
+
 #profile-wrapper{
   height: 720px;
 }
@@ -555,7 +656,7 @@ footer img:nth-child(3):hover{
   font-size: 9px;
 }
 .contact-wrapper-inner p:nth-child(1) a{
-  font-size: 24px;
+  font-size: 24px;}
   #experince-wrapper{
       height: 590px;
   }
@@ -571,7 +672,81 @@ footer img:nth-child(3):hover{
   font-size: 13px;
 }
 }
+@media screen and (max-width:500px) {
+  header{
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+    width: 100%;
+  }
+.header-inner aside ul{
+  display: block;
+  margin: 0;
+  padding: 0;
+  top: 14px;
+  left: -40%;
+  position: absolute;
+}
+}
+@media screen and (max-width:470px) {
+  header{
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+    width: 100%;
+  }
+.header-inner aside ul{
+  display: block;
+  margin: 0;
+  padding: 0;
+  top: 14px;
+  left: -44%;
+  position: absolute;
+}
+}
+@media screen and (max-width:430px) {
+  header{
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+    width: 100%;
+  }
+.header-inner aside ul{
+  display: block;
+  margin: 0;
+  padding: 0;
+  top: 14px;
+  left: -48%;
+  position: absolute;
+}
+.title{
+    font-size: 36px;
+}
+.myname{
+    font-size: 16px;
+}
+.mywork{
+  font-size: 13px;
+}
+.slideshow{
+  height: 250px;
+}
+}
 @media screen and (max-width:413px) {
+  header{
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+    width: 100%;
+  }
+  .header-inner aside ul{
+    display: block;
+    margin: 0;
+    padding: 0;
+    top: 14px;
+    left: -50%;
+    position: absolute;
+  }
 .or{
   font-size: 12px;
 }
@@ -584,12 +759,29 @@ footer img:nth-child(3):hover{
 .contact-wrapper-inner p:nth-child(1) a{
   font-size: 20px;
 }
+.title{
+    font-size: 36px;
+}
+.myname{
+    font-size: 16px;
+}
+.mywork{
+  font-size: 13px;
+}
 }
 @media screen and (max-width:375px) {
+  header{
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+    width: 100%;
+  }
   .header-inner{
     height: 50px;
   }
-
+.header-inner2 p{
+  display: block;
+}
   .title{
       font-size: 36px;
   }
@@ -599,16 +791,15 @@ footer img:nth-child(3):hover{
   .mywork{
     font-size: 13px;
   }
-  .slideshow{
-    height: 240px;
-  }
 
   .header-inner ul a{
     font-size: 11px;
+    color:#fff;
   }
+
   .title-wrapper{
     position: absolute;
-    top:90px;
+    top:130px;
   }
   #experince-wrapper{
       height: 590px;
@@ -651,10 +842,90 @@ footer img:nth-child(3):hover{
   position: fixed;
   bottom:10px;
   right:2%;
+  z-index: 1;
 }
 .img8:hover{
   opacity: 1.0;
 }
+
+.header-inner2{
+  height: 50px;
+  margin: 0 auto;
+ justify-content: space-between;
+  display:flex;
+}
+.header-inner2 p{
+  margin-left: 20px;
+}
+.header-inner2 button{
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  z-index: 1;
+}
+.header-inner aside ul{
+  display: block;
+  margin: 0;
+  padding: 0;
+  top: 14px;
+  left: -55%;
+  position: absolute;
+}
+.header-inner aside ul li{
+  margin-bottom: 20px;
+}
+.header-inner {
+    width:100%;
+    top: 0px;
+    position:relative;
+    height: 0;
+}
+.header-inner2 button img{
+width: 25px;
+height: 25px;
+}
+.header-inner aside{
+  background-color: rgba(36,0,9,0.8);
+  width:100%;
+  height: 200px;
+  top: -350px;
+  position: fixed;
+}
+header{
+  height: 50px;
+}
+.slideshow{
+  height: 230px;
+}
+
+.title-wrapper{
+  position: absolute;
+  top:90px;
+}
+.contact-wrapper-inner p:nth-child(1) a{
+  font-size: 17px;
+}
+.twitter-image{
+width: 22px;
+}
+#contact-wrapper p:nth-child(3){
+font-size: 9px;
+}
+#profile-wrapper{
+height: 710px;
+}
+.title{
+  font-size: 33px;
+}
+.myname{
+  font-size: 14px;
+}
+.mywork{
+font-size: 11px;
+}
+
 /*
 .header-inner{
   width:975px;
@@ -682,33 +953,4 @@ footer img:nth-child(3):hover{
 
 
 
-}
-@media screen and (max-width:350px) {
-  .contact-wrapper-inner p:nth-child(1) a{
-    font-size: 17px;
-}
-.twitter-image{
-  width: 22px;
-}
-#contact-wrapper p:nth-child(3){
-  font-size: 9px;
-}
-#profile-wrapper{
-  height: 710px;
-}
-.title{
-    font-size: 33px;
-}
-.myname{
-    font-size: 14px;
-}
-.mywork{
-  font-size: 11px;
-}
-.slideshow{
-  height: 240px;
-}
-.title-wrapper{
-  position: absolute;
-  top:100px;
 }
