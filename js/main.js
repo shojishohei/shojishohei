@@ -72,7 +72,7 @@ $(function () {
     });
 });
 
-/*05-08を引用*/
+/*05-08を引用
 $(function () {
 
     $('#profile-wrapper').on('click', function () {
@@ -85,11 +85,11 @@ $(function () {
     });
 
 });
-
+*/
 /*04-04を引用*/
 $(function(){
     //
-    var duration = 300;
+    var duration = 600;
    /*変数 durationに300を格納*/
     // aside ----------------------------------------
     var $aside = $('.header-inner aside');
