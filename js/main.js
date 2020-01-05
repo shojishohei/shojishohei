@@ -9,14 +9,16 @@ $(function () {
     // slideshow クラスを持った要素ごとに処理を実行
     $('.slideshow').each(function () {
 
-        var $slides = $(this).find('img'), // すべてのスライド
-            slideCount = $slides.length,   // スライドの点数
-            currentIndex = 0;              // 現在のスライドを示すインデックス
+        var $slides = $(this).find('img'), // slide変数に.slideshowのimg要素を格納
+            slideCount = $slides.length,   // slideCountにslideの要素数を格納(現在は4が入っている)
+            currentIndex = 0;              // 表示しているスライドが全体のうちの何番目を表すもの
 
-        // 1 番目のスライドをフェードインで表示
+        //slideに格納されているうちの一番目をスライドインする
+        //fadeIn()とは.slideshowにdisplay:noneで非表示にされている要素を不透明度を変化させながら表示させるもの
         $slides.eq(currentIndex).fadeIn();
 
-        // 7500 ミリ秒ごとに showNextSlide 関数を実行
+        // showNextSlide 関数とは時間の経過とともに自動的にスライドを切り替えていく処理
+        //4秒おきにshowNextSlide関数を実行する
         setInterval(showNextSlide, 4000);
 
         // 次のスライドを表示する関数
@@ -47,10 +49,11 @@ $(function () {
      */
     $('.header-inner').each(function () {
 
-        var $window = $(window), // ウィンドウを jQuery オブジェクト化
+        var $window = $(window), // ウィンドウを jQuery オブジェクト化(スクロールをjQueryで利用するにはWindowオブジェクトを
+      // jQueryオブジェクト化する必要がある)
             $header = $(this),   // ヘッダーを jQuery オブジェクト化
-            // ヘッダーのデフォルト位置を取得
-            headerOffsetTop = $header.offset().top;
+
+            headerOffsetTop = $header.offset().top;//jQuery要素の位置を取得するメソッド
 
         // ウィンドウのスクロールイベントを監視
         // (ウィンドウがスクロールするごとに処理を実行する)
@@ -94,13 +97,13 @@ $(function(){
     // aside ----------------------------------------
     var $aside = $('.header-inner aside');
 
-      var $asides = $('.header-inner2 button ')
+      var $asides = $('header button')
         .on('click', function(){
             $aside.toggleClass('open');/*asideにopenというクラスがあるか確認。*/
             if($aside.hasClass('open')){
-                $aside.stop(true).animate({top: '50px'}, duration, 'easeOutBack');
+                $aside.stop(true).animate({top: '50px'}, duration, 'linear');
             }else{
-                $aside.stop(true).animate({top: '-350px'}, duration, 'easeInBack');
+                $aside.stop(true).animate({top: '-350px'}, duration, 'linear');
             };
         });
 
@@ -113,7 +116,7 @@ $(function () {
      */
     $('.img8').each(function () {
 
-        // html か body のいずれがスクロール可能な要素かを検出
+        //scrollTop()が利用できる要素を検出。 html か body のいずれがスクロール可能な要素かを検出
         var $el = $(scrollableElement('html', 'body'));
 
         // ボタンにクリックイベントを設定
@@ -123,8 +126,7 @@ $(function () {
         });
     });
 
-    // scrollTop が利用できる要素を検出する関数
-    // http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links#update4
+//arguments.lengthで引数のelementsの要素数を取得
     function scrollableElement (elements) {
         var i, len, el, $el, scrollable;
         for (i = 0, len = arguments.length; i < len; i++) {
@@ -144,4 +146,16 @@ $(function () {
         return [];
     }
 
+});
+/*
+each()  jQueryオブジェクトについて、選択された要素ごとに関数を実行する
+element 指定された全ての要素
+
+*/
+
+/*p.202 05-08*/
+$('.header-inner>aside>ul>li>a').smoothScroll({
+  afterScroll:function(){
+  location.hash = $(this).attr('href');
+},  speed:1000
 });
