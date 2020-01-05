@@ -92,7 +92,7 @@ $(function () {
 /*04-04を引用*/
 $(function(){
     //
-    var duration = 450;
+    var duration = 500;
    /*変数 durationに300を格納*/
     // aside ----------------------------------------
     var $aside = $('.header-inner aside');
@@ -101,9 +101,9 @@ $(function(){
         .on('click', function(){
             $aside.toggleClass('open');/*asideにopenというクラスがあるか確認。*/
             if($aside.hasClass('open')){
-                $aside.stop(true).animate({top: '50px'}, duration, 'easeInQuad');
+                $aside.stop(true).animate({top: '50px'}, duration, 'linear');
             }else{
-                $aside.stop(true).animate({top: '-350px'}, duration, 'easeInQuad');
+                $aside.stop(true).animate({top: '-350px'}, duration, 'linear');
             };
         });
 

@@ -746,31 +746,8 @@ footer img:nth-child(3):hover{
   height: 240px;
 }
 }
+
 @media screen and (max-width:375px) {
-
-  .header-inner{
-    height: 50px;
-    background-color: #fff;
-  }
-
-.header-inner2 p{
-  display: block;
-}
-  .title{
-      font-size: 36px;
-  }
-  .myname{
-      font-size: 16px;
-  }
-  .mywork{
-    font-size: 13px;
-  }
-
-
-  .title-wrapper{
-    position: absolute;
-    top:130px;
-  }
   #experince-wrapper{
       height: 590px;
   }
@@ -809,10 +786,8 @@ footer img:nth-child(3):hover{
   width: 30px;
   height: 30px;
   opacity: 0.6;
-  position: fixed;
   bottom:10px;
   right:2%;
-  z-index: 1;
 }
 .img8:hover{
   opacity: 1.0;
@@ -822,7 +797,6 @@ footer img:nth-child(3):hover{
   height: 50px;
   margin: 0 auto;
  justify-content: space-between;
-  display:flex;
 }
 .header-inner2 p{
   margin-left: 20px;
@@ -833,31 +807,18 @@ footer img:nth-child(3):hover{
   height: 50px;
   padding: 0;
   border: none;
-  z-index: 1;
 }
 
 .header-inner aside ul li{
   margin-bottom: 20px;
 }
-.header-inner {
-    width:100%;
-    top: 0px;
-    position:relative;
-    height: 0;
-}
+
 .header-inner2 button img{
 width: 25px;
 height: 25px;
 }
-.header-inner aside{
-  width:100%;
-  height: 200px;
-  top: -350px;
-  position: fixed;
-}
-header{
-  height: 50px;
-}
+
+
 .slideshow{
   height: 230px;
 }
