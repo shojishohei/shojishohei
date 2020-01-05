@@ -92,7 +92,7 @@ $(function () {
 /*04-04を引用*/
 $(function(){
     //
-    var duration = 600;
+    var duration = 450;
    /*変数 durationに300を格納*/
     // aside ----------------------------------------
     var $aside = $('.header-inner aside');
@@ -101,9 +101,9 @@ $(function(){
         .on('click', function(){
             $aside.toggleClass('open');/*asideにopenというクラスがあるか確認。*/
             if($aside.hasClass('open')){
-                $aside.stop(true).animate({top: '50px'}, duration, 'linear');
+                $aside.stop(true).animate({top: '50px'}, duration, 'easeInQuad');
             }else{
-                $aside.stop(true).animate({top: '-350px'}, duration, 'linear');
+                $aside.stop(true).animate({top: '-350px'}, duration, 'easeInQuad');
             };
         });
 
@@ -122,7 +122,7 @@ $(function () {
         // ボタンにクリックイベントを設定
         $(this).on('click', function (event) {
             event.preventDefault();
-            $el.animate({ scrollTop: 0 }, 650);
+            $el.animate({ scrollTop: 0 }, 450);
         });
     });
 
@@ -154,8 +154,22 @@ element 指定された全ての要素
 */
 
 /*p.202 05-08*/
+$(function() {
 $('.header-inner>aside>ul>li>a').smoothScroll({
   afterScroll:function(){
   location.hash = $(this).attr('href');
 },  speed:1000
 });
+});
+
+
+$(window).scroll(function (){
+   $('.fadein').each(function(){
+       var elemPos = $(this).offset().top,
+           scroll = $(window).scrollTop(),
+           windowHeight = $(window).height();
+         if (scroll > elemPos - windowHeight + 100){
+             $(this).addClass('scrollin');
+           }
+       });
+   });
