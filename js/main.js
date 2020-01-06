@@ -158,7 +158,7 @@ $(function() {
 $('.header-inner>aside>ul>li>a').smoothScroll({
   afterScroll:function(){
   location.hash = $(this).attr('href');
-},  speed:1000
+},  speed:500
 });
 });
 

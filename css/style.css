@@ -1,6 +1,6 @@
 /*header*/
 html {
-  scroll-padding-top: 110px;
+  scroll-padding-top: 75px;
 }
 body{
     background-color:#EEEEEE;
@@ -551,7 +551,7 @@ footer img:nth-child(3):hover{
   }
   .title-wrapper{
     position: absolute;
-    top:70px;
+    top:60px;
   }
   #profile-wrapper{
     height: 870px;
@@ -588,9 +588,7 @@ footer img:nth-child(3):hover{
     height: 590px;
 }
 @media screen and (max-width:530px) {
-  html {
-    scroll-padding-top: 250px;
-  }
+
   header{
     position: fixed;
     background-color: #fff;
