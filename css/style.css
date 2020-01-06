@@ -603,6 +603,7 @@ footer img:nth-child(3):hover{
   .header-inner{
     width:100%;
     text-align: left;
+    z-index: -1;
   }
   .header-inner2{
     height: 50px;
