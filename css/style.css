@@ -16,6 +16,26 @@ body{
  transform: translate(0, 0);
 }
 
+.fadein2 {
+ opacity: 0;
+ transform : translate(50px, 0);
+ transition : all 1500ms;
+}
+
+.fadein2.scrollin{
+ opacity: 1;
+ transform: translate(0, 0);
+}
+.fadein3 {
+ opacity: 0;
+ transform : translate(-50px, 0);
+ transition : all 1500ms;
+}
+
+.fadein3.scrollin{
+ opacity: 1;
+ transform: translate(0, 0);
+}
 .header-inner{
     z-index:1;
     width: 100%;
@@ -163,14 +183,14 @@ dd{
     color:#666666;
 }
 #experince-wrapper{
-  height: 550px;
+  height: 600px;
   background-color: #fff;
   display: block;
 }
 .experince-wrapper-inner{
   width: 85%;
   margin: 0px auto;
-  height: 500px;
+  height: 550px;
   padding-top: 10px;
 }
 .experince-wrapper-inner h1{
@@ -180,22 +200,22 @@ font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 height: 40px;
 margin-left: 4%;
 }
-.experince-wrapper-inner section{
-  height: 110px;
+.fadein3> section{
+  height: 120px;
   background-color:#EEEEEE;
   width: 90%;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 30px auto;
   padding:1px 10px;
   box-shadow:7px 7px #660033;
   border:1px solid #660033;
 
 }
-.experince-wrapper-inner section h2{
+.fadein3> section h2{
   font-size: 16px;
   color:#555555;
   font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 }
-.experince-wrapper-inner section h2 span{
+.fadein3> section h2 span{
   color:#660033;
 }
 .content{
@@ -559,7 +579,7 @@ footer img:nth-child(3):hover{
   #profile-wrapper{
     height: 870px;
   }
-  .experince-wrapper-inner section{
+  .experince-wrapper-inner .fadein section{
     height: 125px;
   }
   #contact-wrapper>p{
@@ -591,6 +611,7 @@ footer img:nth-child(3):hover{
     height: 590px;
 }
 @media screen and (max-width:530px) {
+
   header{
     position: fixed;
     background-color: #fff;

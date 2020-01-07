@@ -162,14 +162,34 @@ $('.header-inner>aside>ul>li>a').smoothScroll({
 });
 });
 
-
+/*ふわっと出るようにしたいところ*/
 $(window).scroll(function (){
    $('.fadein').each(function(){
        var elemPos = $(this).offset().top,
            scroll = $(window).scrollTop(),
            windowHeight = $(window).height();
-         if (scroll > elemPos - windowHeight + 100){
+         if (scroll > elemPos - windowHeight + 150){
              $(this).addClass('scrollin');
            }
        });
    });
+   $(window).scroll(function (){
+      $('.fadein2').each(function(){
+          var elemPos = $(this).offset().top,
+              scroll = $(window).scrollTop(),
+              windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 150){
+                $(this).addClass('scrollin');
+              }
+          });
+      });
+      $(window).scroll(function (){
+         $('.fadein3').each(function(){
+             var elemPos = $(this).offset().top,
+                 scroll = $(window).scrollTop(),
+                 windowHeight = $(window).height();
+               if (scroll > elemPos - windowHeight +150){
+                   $(this).addClass('scrollin');
+                 }
+             });
+         });
