@@ -530,6 +530,9 @@ footer img:nth-child(3):hover{
 }
  }
 @media screen and (max-width:706px) {
+/*  html {
+    scroll-padding-top: 125px;
+  }*/
     .header-inner{
       text-align: center;
     }
@@ -588,7 +591,6 @@ footer img:nth-child(3):hover{
     height: 590px;
 }
 @media screen and (max-width:530px) {
-
   header{
     position: fixed;
     background-color: #fff;
