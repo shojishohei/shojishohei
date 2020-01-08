@@ -184,3 +184,10 @@ $(window).scroll(function (){
                  }
              });
          });
+
+  $(function(){
+    $('header p').typoShadow();
+  });
+  $(function(){
+    $('.title-wrapper').typoShadow();
+  });
