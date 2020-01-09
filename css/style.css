@@ -601,7 +601,9 @@ footer img:nth-child(3):hover{
     height: 590px;
 }
 @media screen and (max-width:530px) {
-
+  html {
+    scroll-padding-top: 300px;
+  }
   header{
     position: fixed;
     background-color: #fff;
