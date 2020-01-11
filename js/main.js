@@ -1,4 +1,24 @@
-
+$(window).on('load', function() {
+  var windowWidth = $(window).width();
+  var windowSm = 530; // スマホに切り替わる横幅
+    if (windowWidth <= windowSm) {
+     var headerHeight = 250; // スマホのヘッダー等の高さ分の数値を入れる
+     } else {
+     var headerHeight =68.8; // PC のヘッダー等の高さ分の数値を入れる
+    }
+    var url = $(location).attr('href');
+    setTimeout(function() {
+      if(url.indexOf("?id=") != -1){
+       var speed = 1000;
+       var id = url.split("?id=");
+       var $target = $('#' + id[id.length - 1]);
+        if($target.length){
+         var pos = $target.offset().top-headerHeight;
+         $("html, body").animate({scrollTop:pos}, speed, "swing");
+        }
+      }
+    },2000);
+  });
 /*05-01を引用*/
 
 $(function () {
@@ -70,7 +90,7 @@ $(function () {
 
         // ウィンドウのスクロールイベントを発生させる
         // (ヘッダーの初期位置を調整するため)
-        $window.trigger('scroll');
+       $window.trigger('scroll'); //プログラム側からブラウザにスクロールの処理//
 
     });
 });
@@ -184,7 +204,6 @@ $(window).scroll(function (){
                  }
              });
          });
-
   $(function(){
     $('header p').typoShadow();
   });
