@@ -10,7 +10,12 @@ body{
  transform : translate(0, 50px);
  transition : all 1500ms;
 }
-
+.title-wrapper p{
+  opacity: 0;
+  }
+.title-wrapper p span{
+    opacity: 0;
+    }
 .fadein.scrollin{
  opacity: 1;
  transform: translate(0, 0);

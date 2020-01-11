@@ -1,3 +1,4 @@
+/*サイドバーのスクロール箇所*/
 $(window).on('load', function() {
   var windowWidth = $(window).width();
   var windowSm = 530; // スマホに切り替わる横幅
@@ -19,6 +20,7 @@ $(window).on('load', function() {
       }
     },2000);
   });
+
 /*05-01を引用*/
 
 $(function () {
@@ -207,3 +209,17 @@ $(window).scroll(function (){
   $(function(){
     $('header p').typoShadow();
   });
+
+  $(window).on('load',function(){
+// ここから文字を<span></span>で囲む記述
+$('.title-wrapper p').children().andSelf().contents().each(function() {
+if (this.nodeType == 3) {
+$(this).replaceWith($(this).text().replace(/(\S)/g, '<span>$1</span>'));
+}
+});
+// ここから一文字ずつフェードインさせる記述
+$('.title-wrapper p').css({'opacity':1});
+for (var i = 0; i <= $('.title-wrapper p').children().size(); i++) {
+$('.title-wrapper p').children('span:eq('+i+')').delay(50*i).animate({'opacity':1},50);
+};
+});
