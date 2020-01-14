@@ -1,4 +1,22 @@
-/*サイドバーのスクロール箇所*/
+jQuery(function(){
+    var windowWidth = $(window).width();
+    var windowSm = 530; // スマホに切り替わる横幅
+      if (windowWidth <= windowSm) {
+        var headerHight = 240; // スマホのヘッダー等の高さ分の数値を入れる
+       } else {
+        var headerHight = 68.8; // PC のヘッダー等の高さ分の数値を入れる
+      }
+    jQuery('a[href^=#]').click(function() {
+    var speed = 1000;
+    var href= jQuery(this).attr("href");
+    var target = jQuery(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top-headerHight;
+    jQuery('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+   });
+});
+
+/*サイドバーのスクロール箇所
 $(function() {
   $(window).on('load', function() {
     var windowWidth = $(window).width();
