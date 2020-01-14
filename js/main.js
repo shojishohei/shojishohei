@@ -1,25 +1,35 @@
 /*サイドバーのスクロール箇所*/
-$(window).on('load', function() {
-  var windowWidth = $(window).width();
-  var windowSm = 530; // スマホに切り替わる横幅
+$(function() {
+  $(window).on('load', function() {
+    var windowWidth = $(window).width();
+    var windowSm = 530; // スマホに切り替わる横幅
     if (windowWidth <= windowSm) {
      var headerHeight = 250; // スマホのヘッダー等の高さ分の数値を入れる
      } else {
      var headerHeight =68.8; // PC のヘッダー等の高さ分の数値を入れる
     }
-    var url = $(location).attr('href');
-    setTimeout(function() {
-      if(url.indexOf("?id=") != -1){
-       var speed = 1000;
-       var id = url.split("?id=");
-       var $target = $('#' + id[id.length - 1]);
-        if($target.length){
-         var pos = $target.offset().top-headerHeight;
-         $("html, body").animate({scrollTop:pos}, speed, "swing");
-        }
-      }
-    },2000);
-  });
+    $('a[href^=#]').click(function() {
+      var speed = 1000;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top - headerHeight;
+      $('body html').animate({scrollTop:position}, speed, 'swing');
+    })
+    // var url = $(location).attr('href');
+    // setTimeout(function() {
+    //   if(url.indexOf("?id=") != -1){
+    //   var speed = 1000;
+    //   var id = url.split("?id=");
+    //   var $target = $('#' + id[id.length - 1]);
+    //     if($target.length){
+    //      var pos = $target.offset().top-headerHeight;
+    //      $("html, body").animate({scrollTop:pos}, speed, "swing");
+    //     }
+    //   }
+    // },2000);
+  });    
+})
+
 
 
   $(window).on('load',function(){
