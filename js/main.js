@@ -4,7 +4,7 @@ $(function() {
     var windowWidth = $(window).width();
     var windowSm = 530; // スマホに切り替わる横幅
     if (windowWidth <= windowSm) {
-     var headerHeight = 400; // スマホのヘッダー等の高さ分の数値を入れる
+     var headerHeight = 240; // スマホのヘッダー等の高さ分の数値を入れる
      } else {
      var headerHeight =68.8; // PC のヘッダー等の高さ分の数値を入れる
     }
