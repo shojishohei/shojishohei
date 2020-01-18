@@ -202,13 +202,13 @@ element 指定された全ての要素
 */
 
 /*p.202 05-08*/
-$(function() {
-$('.header-inner>aside>ul>li>a').smoothScroll({
-  afterScroll:function(){
-  location.hash = $(this).attr('href');
-},  speed:500
-});
-});
+// $(function() {
+// $('.header-inner>aside>ul>li>a').smoothScroll({
+//   afterScroll:function(){
+//   location.hash = $(this).attr('href');
+// },  speed:500
+// });
+// });
 
 /*ふわっと出るようにしたいところ*/
 $(window).scroll(function (){
