@@ -7,7 +7,7 @@ body{
 }
 .fadein {
  opacity: 0;
- transform : translate(0, 50px);
+ transform : translate(0, 20px);
  transition : all 1500ms;
 }
 .title-wrapper p{
@@ -342,7 +342,7 @@ color:#666666;
 
 }
 .work-wrapper-inner section{
-  width: 24%;
+  width: 40%;
   height: 340px;
   background-color: #fff;
   border-radius: 10px;
@@ -508,9 +508,11 @@ footer img:nth-child(3):hover{
 .work-wrapper-inner{
   width: 80%;
 }
+/*
 .work-wrapper-inner section{
   width: 30%;
 }
+*/
 
 .work-title{
   font-size: 16px;
@@ -581,7 +583,7 @@ footer img:nth-child(3):hover{
     font-size: 16px;
   }
   #work-wrapper{
-    height: 1250px;
+    height: 920px;
   }
   .work-wrapper-inner{
     display: block;
